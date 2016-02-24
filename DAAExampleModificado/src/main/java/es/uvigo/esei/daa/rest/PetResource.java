@@ -15,19 +15,20 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import es.uvigo.esei.daa.dao.DAOException;
-import es.uvigo.esei.daa.dao.PeopleDAO;
+import es.uvigo.esei.daa.dao.PetDAO;
 import es.uvigo.esei.daa.entities.Pet;
 
 
-@Path("/people")
+@Path("/pet")
 @Produces(MediaType.APPLICATION_JSON)
 public class PetResource {
+	//comprobar esto
 	private final static Logger LOG = Logger.getLogger(PeopleResource.class.getName());
 	
 	private final PetDAO dao;
 
 	public PetResource() {
-		this(new PetDAO());
+		dao=new PetDAO();
 	}
 
 

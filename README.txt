@@ -1,0 +1,2 @@
+-mvn no funciona sin crear la base de datos
+-arreglar problemas de compilado

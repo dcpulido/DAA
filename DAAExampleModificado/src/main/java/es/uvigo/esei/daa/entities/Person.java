@@ -1,6 +1,7 @@
 package es.uvigo.esei.daa.entities;
 
 import static java.util.Objects.requireNonNull;
+import java.util.*;
 
 /**
  * An entity that represents a person.
@@ -23,6 +24,12 @@ public class Person {
 	 * @param name name of the person.
 	 * @param surname surname of the person.
 	 */
+	public Person(int id, String name, String surname) {
+		this.id = id;
+		this.setName(name);
+		this.setSurname(surname);
+		pets=new ArrayList<Pet>();
+	}
 	public Person(int id, String name, String surname,List<Pet> pets) {
 		this.id = id;
 		this.setName(name);
