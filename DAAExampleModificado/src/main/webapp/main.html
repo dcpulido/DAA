@@ -7,16 +7,21 @@
 <body>
 	<div id="people-container">
 		<h1>People</h1>
-		<a id="#logout" href="logout">Logout</a>
+		<a id="#logout" href="logout">Logout<br/></a>
 	</div>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="js/view/people.js"></script>
+	<script type="text/javascript" src="js/view/pet.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			insertPeopleForm($('#people-container'));
+			insertPetForm($('#people-container'));
 			insertPeopleList($('#people-container'));
 			initPeople();
+			
+			insertPetList($('#people-container'));
+			initPet();
 		});
 	</script>
 </body>

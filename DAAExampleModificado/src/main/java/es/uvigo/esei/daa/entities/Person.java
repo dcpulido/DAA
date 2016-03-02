@@ -12,6 +12,7 @@ public class Person {
 	private int id;
 	private String name;
 	private String surname;
+	private String pet;
 	private List<Pet> pets;
 	
 	// Constructor needed for the JSON conversion
@@ -45,7 +46,6 @@ public class Person {
 	public int getId() {
 		return id;
 	}
-
 	/**
 	 * Returns the name of the person.
 	 * 

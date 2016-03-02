@@ -59,23 +59,24 @@ public class PetDAO extends DAO {
 		}
 	}
 
-	public Pet add(String name, String tipe)
+	public Pet add(String name, String tipe, int idPeople )
 	throws DAOException, IllegalArgumentException {
 		if (name == null || tipe == null) {
 			throw new IllegalArgumentException("name and tipe can't be null");
 		}
 		
 		try (Connection conn = this.getConnection()) {
-			final String query = "INSERT INTO pet VALUES(null, ?, ?)";
+			final String query = "INSERT INTO pet VALUES(null, ?, ?, ?)";
 			
 			try (PreparedStatement statement = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
 				statement.setString(1, name);
 				statement.setString(2, tipe);
+				statement.setInt(3, idPeople);
 				
 				if (statement.executeUpdate() == 1) {
 					try (ResultSet resultKeys = statement.getGeneratedKeys()) {
 						if (resultKeys.next()) {
-							return new Pet(resultKeys.getInt(1), name, tipe);
+							return new Pet(resultKeys.getInt(1), name, tipe, idPeople);
 						} else {
 							LOG.log(Level.SEVERE, "Error retrieving inserted id");
 							throw new SQLException("Error retrieving inserted id");
@@ -138,7 +139,8 @@ public class PetDAO extends DAO {
 		return new Pet(
 			row.getInt("id"),
 			row.getString("name"),
-			row.getString("tipe")
+			row.getString("tipe"),
+			row.getInt("idPeople")
 		);
 	}
 

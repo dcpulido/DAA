@@ -35,5 +35,5 @@ INSERT INTO `daaexample`.`people` (`id`,`name`,`surname`) VALUES (0,'Asunción',
 INSERT INTO `daaexample`.`pets` (`idpet`,`idpeople`,`name`,`tipe`) VALUES (0,4,'fry','dog');
 INSERT INTO `daaexample`.`pets` (`idpet`,`idpeople`,`name`,`tipe`) VALUES (0,3,'juancho','dog');
 INSERT INTO `daaexample`.`pets` (`idpet`,`idpeople`,`name`,`tipe`) VALUES (0,2,'melon','cat');
-INSERT INTO `daaexample`.`pets` (`idpet`,`idpeople`,`name`,`tipe`) VALUES (0,1,'albert','caiman');
+INSERT INTO `daaexample`.`pets` (`idpet`,`idpeople`,`tipe`) VALUES (0,1,'albert','caiman');
 INSERT INTO `daaexample`.`users` (`login`,`password`) VALUES ('admin', '0b893644f3b2097d004c58d585e784ac92dd1356d25158a298573ad54ab2d15d');

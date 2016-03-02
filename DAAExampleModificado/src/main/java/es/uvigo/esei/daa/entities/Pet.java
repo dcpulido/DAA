@@ -6,16 +6,24 @@ public class Pet {
 	private int id;
 	private String name;
 	private String tipe;
+	private int idPeople;
 
 	public Pet(){}
 
-	public Pet(int i, String n, String tip){
+	public Pet(int i, String n, String tip,int k){
 		id = i;
 		this.setName(n);
 		this.setTipe(tip);
+		this.setIdPeop(k);
 	}
 	public int getId() {
 		return id;
+	}
+	public int getIdPeop(){
+		return idPeople;
+	}
+	public void setIdPeop(int i){
+		idPeople=requireNonNull(i, "Name can't be null");
 	}
 
 	public String getName() {

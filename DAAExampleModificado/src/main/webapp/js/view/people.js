@@ -18,7 +18,8 @@ function insertPeopleList(parent) {
 
 function insertPeopleForm(parent) {
 	parent.append(
-		'<form id="' + peopleFormId + '">\
+		'NUEVA PERSONA\
+		<form id="' + peopleFormId + '">\
 			<input name="id" type="hidden" value=""/>\
 			<input name="name" type="text" value="" />\
 			<input name="surname" type="text" value=""/>\

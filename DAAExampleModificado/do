@@ -1,0 +1,5 @@
+start_time=$(date +%s)
+mvn install
+mvn -P run-tomcat-mysql,-acceptance-tests-cargo cargo:run
+finish_time=$(date +%s)
+echo "Time duration: $((finish_time - start_time)) secs." > estadisticas.txt
